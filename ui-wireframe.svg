@@ -140,16 +140,16 @@
       <rect x="445" y="190" width="65" height="32" fill="#4F46E5"/><text x="477" y="210" fill="#FFF">1.00</text>
     </g>
 
-    <!-- legend -->
-    <text x="178" y="260" font-size="8" fill="#8A8F9E">相関係数</text>
-    <rect x="178" y="266" width="160" height="10" fill="url(#corrGrad)"/>
-    <text x="178" y="290" font-size="7" fill="#8A8F9E">-1.0</text>
-    <text x="330" y="290" font-size="7" fill="#8A8F9E" text-anchor="end">+1.0</text>
+    <!-- legend（実際のplotly出力に合わせ、右側の縦カラーバーにしている） -->
+    <text x="522" y="98" font-size="7" fill="#8A8F9E">相関係数</text>
+    <rect x="522" y="104" width="14" height="120" fill="url(#corrGradV)"/>
+    <text x="540" y="112" font-size="7" fill="#8A8F9E">+1.0</text>
+    <text x="540" y="228" font-size="7" fill="#8A8F9E">-1.0</text>
     <defs>
-      <linearGradient id="corrGrad" x1="0" x2="1" y1="0" y2="0">
-        <stop offset="0%" stop-color="#DC2626"/>
+      <linearGradient id="corrGradV" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#4F46E5"/>
         <stop offset="50%" stop-color="#FFFFFF"/>
-        <stop offset="100%" stop-color="#4F46E5"/>
+        <stop offset="100%" stop-color="#DC2626"/>
       </linearGradient>
     </defs>
   </g>
