@@ -1,0 +1,250 @@
+<svg viewBox="0 0 1360 1000" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', 'Hiragino Sans', sans-serif">
+  <rect x="0" y="0" width="1360" height="1000" fill="#EEF0F4"/>
+
+  <text x="30" y="34" font-size="22" font-weight="700" fill="#1B2334">PortfoliR — UIワイヤーフレーム</text>
+
+  <!-- ============ Panel 1: ダッシュボード ============ -->
+  <g transform="translate(30,60)">
+    <text x="0" y="0" font-size="15" font-weight="700" fill="#4F46E5">① ダッシュボード</text>
+    <rect x="0" y="10" width="620" height="420" rx="8" fill="#FFFFFF" stroke="#DDE1EA" stroke-width="1.5"/>
+
+    <!-- sidebar -->
+    <rect x="0" y="10" width="150" height="420" rx="8" fill="#F8F9FB" stroke="#DDE1EA"/>
+    <text x="12" y="32" font-size="10" font-weight="700" fill="#1B2334">ポートフォリオ設定</text>
+    <text x="12" y="50" font-size="8" fill="#8A8F9E">ティッカーシンボル</text>
+    <rect x="12" y="55" width="126" height="24" rx="4" fill="#FFFFFF" stroke="#C9CDD8"/>
+    <text x="16" y="70" font-size="7" fill="#4B5061">AAPL, MSFT, GOOGL...</text>
+    <text x="12" y="94" font-size="8" fill="#8A8F9E">保有比率</text>
+    <rect x="12" y="99" width="126" height="16" rx="4" fill="#FFFFFF" stroke="#C9CDD8"/>
+    <text x="12" y="130" font-size="8" fill="#8A8F9E">取得期間</text>
+    <rect x="12" y="135" width="126" height="16" rx="4" fill="#FFFFFF" stroke="#C9CDD8"/>
+    <text x="12" y="164" font-size="8" fill="#8A8F9E">データソース</text>
+    <circle cx="16" cy="176" r="3" fill="#4F46E5"/>
+    <text x="24" y="179" font-size="7" fill="#1B2334">サンプル（オフライン）</text>
+    <circle cx="16" cy="190" r="3" fill="none" stroke="#C9CDD8"/>
+    <text x="24" y="193" font-size="7" fill="#1B2334">Yahoo Finance</text>
+    <text x="12" y="216" font-size="8" fill="#8A8F9E">初期投資額</text>
+    <rect x="12" y="221" width="126" height="16" rx="4" fill="#FFFFFF" stroke="#C9CDD8"/>
+    <text x="12" y="252" font-size="8" fill="#8A8F9E">無リスク金利 / VaR信頼水準</text>
+    <rect x="12" y="257" width="126" height="4" rx="2" fill="#DDE1EA"/>
+    <circle cx="60" cy="259" r="5" fill="#4F46E5"/>
+    <rect x="12" y="270" width="126" height="4" rx="2" fill="#DDE1EA"/>
+    <circle cx="95" cy="272" r="5" fill="#4F46E5"/>
+    <rect x="12" y="300" width="126" height="26" rx="5" fill="#4F46E5"/>
+    <text x="75" y="317" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="600">▶ 分析を実行</text>
+    <text x="12" y="410" font-size="6" fill="#A7ABB8">※デモ・教育目的です。投資助言では</text>
+    <text x="12" y="419" font-size="6" fill="#A7ABB8">ありません。</text>
+
+    <!-- value boxes row1 -->
+    <g font-size="8">
+      <rect x="160" y="20" width="145" height="52" rx="6" fill="#4F46E5"/>
+      <text x="170" y="36" fill="#E4E2FF" font-size="8">年率リターン</text>
+      <text x="170" y="58" fill="#FFFFFF" font-size="16" font-weight="700">+12.4%</text>
+
+      <rect x="313" y="20" width="145" height="52" rx="6" fill="#6C757D"/>
+      <text x="323" y="36" fill="#EDEDED" font-size="8">年率ボラティリティ</text>
+      <text x="323" y="58" fill="#FFFFFF" font-size="16" font-weight="700">18.7%</text>
+
+      <rect x="466" y="20" width="145" height="52" rx="6" fill="#0DCAF0"/>
+      <text x="476" y="36" fill="#053642" font-size="8">シャープレシオ</text>
+      <text x="476" y="58" fill="#053642" font-size="16" font-weight="700">0.66</text>
+    </g>
+
+    <!-- value boxes row2 -->
+    <g font-size="8">
+      <rect x="160" y="80" width="145" height="52" rx="6" fill="#FFC107"/>
+      <text x="170" y="96" fill="#4A3B00" font-size="8">最大ドローダウン</text>
+      <text x="170" y="118" fill="#4A3B00" font-size="16" font-weight="700">-24.1%</text>
+
+      <rect x="313" y="80" width="145" height="52" rx="6" fill="#DC3545"/>
+      <text x="323" y="96" fill="#FFE1E4" font-size="8">ヒストリカルVaR(95%)</text>
+      <text x="323" y="118" fill="#FFFFFF" font-size="16" font-weight="700">2.1%</text>
+
+      <rect x="466" y="80" width="145" height="52" rx="6" fill="#DC3545"/>
+      <text x="476" y="96" fill="#FFE1E4" font-size="8">パラメトリックVaR(95%)</text>
+      <text x="476" y="118" fill="#FFFFFF" font-size="16" font-weight="700">2.3%</text>
+    </g>
+
+    <!-- cumulative chart card -->
+    <rect x="160" y="142" width="451" height="150" rx="6" fill="#FFFFFF" stroke="#E3E5EC"/>
+    <text x="170" y="158" font-size="8" font-weight="700" fill="#1B2334">評価額の推移（過去実績ベース）</text>
+    <polyline points="175,270 220,255 265,262 310,235 355,245 400,210 445,225 490,190 535,205 580,175"
+              fill="none" stroke="#4F46E5" stroke-width="2"/>
+    <line x1="175" y1="280" x2="600" y2="280" stroke="#C9CDD8" stroke-dasharray="3,3"/>
+
+    <!-- asset table card -->
+    <rect x="160" y="298" width="451" height="122" rx="6" fill="#FFFFFF" stroke="#E3E5EC"/>
+    <text x="170" y="314" font-size="8" font-weight="700" fill="#1B2334">銘柄別サマリー</text>
+    <text x="170" y="330" font-size="7" fill="#8A8F9E">銘柄</text>
+    <text x="230" y="330" font-size="7" fill="#8A8F9E">比率</text>
+    <text x="290" y="330" font-size="7" fill="#8A8F9E">年率リターン</text>
+    <text x="390" y="330" font-size="7" fill="#8A8F9E">年率ボラティリティ</text>
+    <line x1="170" y1="336" x2="600" y2="336" stroke="#EEF0F4"/>
+    <g font-size="7" fill="#1B2334">
+      <text x="170" y="352">AAPL</text><text x="230" y="352">30%</text><text x="290" y="352">+15.2%</text><text x="390" y="352">21.4%</text>
+      <text x="170" y="368">MSFT</text><text x="230" y="368">30%</text><text x="290" y="368">+11.8%</text><text x="390" y="368">17.9%</text>
+      <text x="170" y="384">GOOGL</text><text x="230" y="384">20%</text><text x="290" y="384">+9.5%</text><text x="390" y="384">19.2%</text>
+      <text x="170" y="400">AMZN</text><text x="230" y="400">20%</text><text x="290" y="400">+13.1%</text><text x="390" y="400">22.6%</text>
+    </g>
+  </g>
+
+  <!-- ============ Panel 2: 相関 ============ -->
+  <g transform="translate(690,60)">
+    <text x="0" y="0" font-size="15" font-weight="700" fill="#4F46E5">② 相関</text>
+    <rect x="0" y="10" width="640" height="420" rx="8" fill="#FFFFFF" stroke="#DDE1EA" stroke-width="1.5"/>
+    <rect x="0" y="10" width="150" height="420" rx="8" fill="#F8F9FB" stroke="#DDE1EA"/>
+    <text x="12" y="32" font-size="10" font-weight="700" fill="#1B2334">（サイドバー共通）</text>
+    <text x="12" y="50" font-size="7" fill="#8A8F9E">銘柄・比率・期間・</text>
+    <text x="12" y="62" font-size="7" fill="#8A8F9E">データソース等の設定</text>
+    <rect x="12" y="300" width="126" height="26" rx="5" fill="#4F46E5"/>
+    <text x="75" y="317" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="600">▶ 分析を実行</text>
+
+    <rect x="165" y="24" width="460" height="392" rx="6" fill="#FFFFFF" stroke="#E3E5EC"/>
+    <text x="178" y="42" font-size="9" font-weight="700" fill="#1B2334">銘柄間の相関ヒートマップ</text>
+
+    <!-- heatmap grid 4x4 -->
+    <g font-size="8" text-anchor="middle">
+      <!-- column labels -->
+      <text x="270" y="70" fill="#8A8F9E">AAPL</text>
+      <text x="340" y="70" fill="#8A8F9E">MSFT</text>
+      <text x="410" y="70" fill="#8A8F9E">GOOGL</text>
+      <text x="480" y="70" fill="#8A8F9E">AMZN</text>
+      <!-- row labels -->
+      <text x="222" y="103" fill="#8A8F9E" text-anchor="end">AAPL</text>
+      <text x="222" y="138" fill="#8A8F9E" text-anchor="end">MSFT</text>
+      <text x="222" y="173" fill="#8A8F9E" text-anchor="end">GOOGL</text>
+      <text x="222" y="208" fill="#8A8F9E" text-anchor="end">AMZN</text>
+
+      <!-- row AAPL -->
+      <rect x="235" y="85" width="65" height="32" fill="#4F46E5"/><text x="267" y="105" fill="#FFF">1.00</text>
+      <rect x="305" y="85" width="65" height="32" fill="#8B84F0"/><text x="337" y="105" fill="#FFF">0.62</text>
+      <rect x="375" y="85" width="65" height="32" fill="#B3ADF5"/><text x="407" y="105" fill="#1B2334">0.41</text>
+      <rect x="445" y="85" width="65" height="32" fill="#A39CF2"/><text x="477" y="105" fill="#1B2334">0.51</text>
+
+      <!-- row MSFT -->
+      <rect x="235" y="120" width="65" height="32" fill="#8B84F0"/><text x="267" y="140" fill="#FFF">0.62</text>
+      <rect x="305" y="120" width="65" height="32" fill="#4F46E5"/><text x="337" y="140" fill="#FFF">1.00</text>
+      <rect x="375" y="120" width="65" height="32" fill="#C9C4F7"/><text x="407" y="140" fill="#1B2334">0.35</text>
+      <rect x="445" y="120" width="65" height="32" fill="#B3ADF5"/><text x="477" y="140" fill="#1B2334">0.44</text>
+
+      <!-- row GOOGL -->
+      <rect x="235" y="155" width="65" height="32" fill="#B3ADF5"/><text x="267" y="175" fill="#1B2334">0.41</text>
+      <rect x="305" y="155" width="65" height="32" fill="#C9C4F7"/><text x="337" y="175" fill="#1B2334">0.35</text>
+      <rect x="375" y="155" width="65" height="32" fill="#4F46E5"/><text x="407" y="175" fill="#FFF">1.00</text>
+      <rect x="445" y="155" width="65" height="32" fill="#EFB8BC"/><text x="477" y="175" fill="#1B2334">-0.12</text>
+
+      <!-- row AMZN -->
+      <rect x="235" y="190" width="65" height="32" fill="#A39CF2"/><text x="267" y="210" fill="#1B2334">0.51</text>
+      <rect x="305" y="190" width="65" height="32" fill="#B3ADF5"/><text x="337" y="210" fill="#1B2334">0.44</text>
+      <rect x="375" y="190" width="65" height="32" fill="#EFB8BC"/><text x="407" y="210" fill="#1B2334">-0.12</text>
+      <rect x="445" y="190" width="65" height="32" fill="#4F46E5"/><text x="477" y="210" fill="#FFF">1.00</text>
+    </g>
+
+    <!-- legend -->
+    <text x="178" y="260" font-size="8" fill="#8A8F9E">相関係数</text>
+    <rect x="178" y="266" width="160" height="10" fill="url(#corrGrad)"/>
+    <text x="178" y="290" font-size="7" fill="#8A8F9E">-1.0</text>
+    <text x="330" y="290" font-size="7" fill="#8A8F9E" text-anchor="end">+1.0</text>
+    <defs>
+      <linearGradient id="corrGrad" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0%" stop-color="#DC2626"/>
+        <stop offset="50%" stop-color="#FFFFFF"/>
+        <stop offset="100%" stop-color="#4F46E5"/>
+      </linearGradient>
+    </defs>
+  </g>
+
+  <!-- ============ Panel 3: モンテカルロシミュレーション ============ -->
+  <g transform="translate(30,510)">
+    <text x="0" y="0" font-size="15" font-weight="700" fill="#4F46E5">③ モンテカルロシミュレーション</text>
+    <rect x="0" y="10" width="620" height="440" rx="8" fill="#FFFFFF" stroke="#DDE1EA" stroke-width="1.5"/>
+    <rect x="0" y="10" width="150" height="440" rx="8" fill="#F8F9FB" stroke="#DDE1EA"/>
+    <text x="12" y="32" font-size="10" font-weight="700" fill="#1B2334">モンテカルロ設定</text>
+    <text x="12" y="50" font-size="8" fill="#8A8F9E">シミュレーション日数</text>
+    <rect x="12" y="55" width="126" height="16" rx="4" fill="#FFFFFF" stroke="#C9CDD8"/>
+    <text x="12" y="86" font-size="8" fill="#8A8F9E">試行回数</text>
+    <rect x="12" y="91" width="126" height="16" rx="4" fill="#FFFFFF" stroke="#C9CDD8"/>
+    <rect x="12" y="300" width="126" height="26" rx="5" fill="#4F46E5"/>
+    <text x="75" y="317" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="600">▶ 分析を実行</text>
+
+    <g font-size="8">
+      <rect x="160" y="20" width="145" height="50" rx="6" fill="#FFC107"/>
+      <text x="170" y="36" fill="#4A3B00" font-size="8">損失確率（期間終了時）</text>
+      <text x="170" y="58" fill="#4A3B00" font-size="16" font-weight="700">18.6%</text>
+
+      <rect x="313" y="20" width="145" height="50" rx="6" fill="#DC3545"/>
+      <text x="323" y="36" fill="#FFE1E4" font-size="8">シミュレーションVaR(95%)</text>
+      <text x="323" y="58" fill="#FFFFFF" font-size="16" font-weight="700">14.2%</text>
+
+      <rect x="466" y="20" width="145" height="50" rx="6" fill="#4F46E5"/>
+      <text x="476" y="36" fill="#E4E2FF" font-size="8">中央値評価額</text>
+      <text x="476" y="58" fill="#FFFFFF" font-size="14" font-weight="700">¥1,142,000</text>
+    </g>
+
+    <!-- fan chart -->
+    <rect x="160" y="80" width="451" height="180" rx="6" fill="#FFFFFF" stroke="#E3E5EC"/>
+    <text x="170" y="96" font-size="8" font-weight="700" fill="#1B2334">将来シナリオのファンチャート</text>
+    <polygon points="180,230 220,225 260,215 300,200 340,195 380,175 420,180 460,155 500,165 540,140 580,150
+                     580,240 540,235 500,255 460,225 420,250 380,210 340,235 300,245 260,255 220,260 180,265"
+             fill="#4F46E5" opacity="0.15"/>
+    <polygon points="180,222 220,212 260,205 300,190 340,182 380,160 420,168 460,142 500,150 540,128 580,135
+                     580,205 540,195 500,215 460,190 420,210 380,178 340,200 300,210 260,220 220,222 180,225"
+             fill="#4F46E5" opacity="0.3"/>
+    <polyline points="180,227 220,218 260,210 300,195 340,188 380,168 420,175 460,148 500,158 540,134 580,143"
+              fill="none" stroke="#4F46E5" stroke-width="2"/>
+    <line x1="180" y1="240" x2="600" y2="240" stroke="#C9CDD8" stroke-dasharray="3,3"/>
+
+    <!-- histogram -->
+    <rect x="160" y="266" width="451" height="152" rx="6" fill="#FFFFFF" stroke="#E3E5EC"/>
+    <text x="170" y="282" font-size="8" font-weight="700" fill="#1B2334">シミュレーション終了時点の評価額分布</text>
+    <g fill="#4F46E5" opacity="0.85">
+      <rect x="185" y="380" width="10" height="20"/>
+      <rect x="198" y="365" width="10" height="35"/>
+      <rect x="211" y="345" width="10" height="55"/>
+      <rect x="224" y="320" width="10" height="80"/>
+      <rect x="237" y="300" width="10" height="100"/>
+      <rect x="250" y="292" width="10" height="108"/>
+      <rect x="263" y="298" width="10" height="102"/>
+      <rect x="276" y="310" width="10" height="90"/>
+      <rect x="289" y="330" width="10" height="70"/>
+      <rect x="302" y="350" width="10" height="50"/>
+      <rect x="315" y="368" width="10" height="32"/>
+      <rect x="328" y="382" width="10" height="18"/>
+      <rect x="341" y="392" width="10" height="8"/>
+    </g>
+    <line x1="260" y1="285" x2="260" y2="405" stroke="#8A8F9E" stroke-dasharray="3,3"/>
+  </g>
+
+  <!-- ============ Panel 4: レポート ============ -->
+  <g transform="translate(690,510)">
+    <text x="0" y="0" font-size="15" font-weight="700" fill="#4F46E5">④ レポート</text>
+    <rect x="0" y="10" width="640" height="440" rx="8" fill="#FFFFFF" stroke="#DDE1EA" stroke-width="1.5"/>
+    <rect x="0" y="10" width="150" height="440" rx="8" fill="#F8F9FB" stroke="#DDE1EA"/>
+    <text x="12" y="32" font-size="10" font-weight="700" fill="#1B2334">（サイドバー共通）</text>
+
+    <rect x="165" y="24" width="460" height="200" rx="6" fill="#FFFFFF" stroke="#E3E5EC"/>
+    <text x="178" y="44" font-size="9" font-weight="700" fill="#1B2334">分析レポートのダウンロード</text>
+    <text x="178" y="66" font-size="8" fill="#5B6072">現在の分析結果をもとに、HTML形式の</text>
+    <text x="178" y="80" font-size="8" fill="#5B6072">レポートを生成します。</text>
+    <rect x="178" y="96" width="230" height="30" rx="5" fill="#4F46E5"/>
+    <text x="293" y="116" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="600">⬇ レポートをダウンロード（HTML）</text>
+    <line x1="178" y1="140" x2="605" y2="140" stroke="#EEF0F4"/>
+    <text x="178" y="160" font-size="7" fill="#A7ABB8">※本アプリの分析結果はデモ・教育目的のシミュレー</text>
+    <text x="178" y="172" font-size="7" fill="#A7ABB8">ションです。投資助言ではありません。実際の投資</text>
+    <text x="178" y="184" font-size="7" fill="#A7ABB8">判断はご自身の責任で行ってください。</text>
+
+    <!-- report preview mock -->
+    <rect x="165" y="238" width="460" height="188" rx="6" fill="#FBFBFD" stroke="#E3E5EC"/>
+    <text x="178" y="256" font-size="8" font-weight="700" fill="#1B2334">レポートプレビュー（HTML出力イメージ）</text>
+    <rect x="178" y="266" width="180" height="10" rx="2" fill="#DDE1EA"/>
+    <rect x="178" y="282" width="300" height="7" rx="2" fill="#EEF0F4"/>
+    <rect x="178" y="294" width="260" height="7" rx="2" fill="#EEF0F4"/>
+    <rect x="178" y="312" width="120" height="60" rx="4" fill="#FFFFFF" stroke="#E3E5EC"/>
+    <polyline points="184,360 200,352 216,356 232,340 248,346 264,326" fill="none" stroke="#4F46E5" stroke-width="1.5"/>
+    <rect x="310" y="312" width="290" height="60" rx="4" fill="#FFFFFF" stroke="#E3E5EC"/>
+    <text x="318" y="326" font-size="7" fill="#8A8F9E">指標</text><text x="380" y="326" font-size="7" fill="#8A8F9E">値</text>
+    <text x="318" y="340" font-size="7" fill="#1B2334">年率リターン</text><text x="380" y="340" font-size="7" fill="#1B2334">+12.4%</text>
+    <text x="318" y="354" font-size="7" fill="#1B2334">シャープレシオ</text><text x="380" y="354" font-size="7" fill="#1B2334">0.66</text>
+    <text x="318" y="368" font-size="7" fill="#1B2334">ヒストリカルVaR</text><text x="380" y="368" font-size="7" fill="#1B2334">2.1%</text>
+  </g>
+</svg>

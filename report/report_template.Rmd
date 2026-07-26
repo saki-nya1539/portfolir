@@ -1,0 +1,93 @@
+---
+title: "PortfoliR ポートフォリオ・リスク分析レポート"
+output: html_document
+params:
+  tickers: NA
+  weights: NA
+  metrics: NA
+  corr_matrix: NA
+  cum_df: NA
+  fan_chart: NA
+  prob_loss: NA
+  initial_value: NA
+  confidence: NA
+  generated_at: NA
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(ggplot2)
+```
+
+**生成日時**: `r params$generated_at`
+**対象銘柄**: `r paste(params$tickers, collapse = ", ")`
+**初期投資額**: `r paste0("¥", formatC(params$initial_value, format = "d", big.mark = ","))`
+**VaR信頼水準**: `r sprintf("%.0f%%", params$confidence * 100)`
+
+> 本レポートはデモ・教育目的で生成されたシミュレーション結果です。実際の投資助言ではありません。投資判断はご自身の責任で行ってください。
+
+## リスク指標
+
+```{r}
+metrics_df <- data.frame(
+  指標 = c(
+    "年率リターン", "年率ボラティリティ", "シャープレシオ", "最大ドローダウン",
+    "ヒストリカルVaR", "パラメトリックVaR"
+  ),
+  値 = c(
+    sprintf("%.2f%%", params$metrics$annual_return * 100),
+    sprintf("%.2f%%", params$metrics$annual_vol * 100),
+    sprintf("%.2f", params$metrics$sharpe),
+    sprintf("%.2f%%", params$metrics$max_dd * 100),
+    sprintf("%.2f%%", params$metrics$hist_var * 100),
+    sprintf("%.2f%%", params$metrics$param_var * 100)
+  ),
+  stringsAsFactors = FALSE
+)
+knitr::kable(metrics_df)
+```
+
+## 保有比率
+
+```{r}
+weights_df <- data.frame(
+  銘柄 = names(params$weights),
+  比率 = sprintf("%.1f%%", as.numeric(params$weights) * 100),
+  stringsAsFactors = FALSE
+)
+knitr::kable(weights_df)
+```
+
+## 過去の評価額推移
+
+```{r}
+ggplot(params$cum_df, aes(x = date, y = cum_value)) +
+  geom_line(color = "#4F46E5", linewidth = 1) +
+  geom_hline(yintercept = params$initial_value, linetype = "dashed", color = "#8A8F9E") +
+  labs(x = NULL, y = "評価額（円）") +
+  theme_minimal()
+```
+
+## 相関行列
+
+```{r}
+knitr::kable(round(params$corr_matrix, 2))
+```
+
+## モンテカルロシミュレーション（将来シナリオ）
+
+```{r}
+ggplot(params$fan_chart, aes(x = day)) +
+  geom_ribbon(aes(ymin = p05, ymax = p95), fill = "#4F46E5", alpha = 0.15) +
+  geom_ribbon(aes(ymin = p25, ymax = p75), fill = "#4F46E5", alpha = 0.30) +
+  geom_line(aes(y = p50), color = "#4F46E5", linewidth = 1) +
+  geom_hline(yintercept = params$initial_value, linetype = "dashed", color = "#8A8F9E") +
+  labs(x = "経過日数", y = "ポートフォリオ評価額（円）") +
+  theme_minimal()
+```
+
+シミュレーション期間終了時点で元本割れする確率: **`r sprintf("%.1f%%", params$prob_loss * 100)`**
+
+---
+
+*このレポートは PortfoliR（R Shiny製ポートフォリオ・リスク分析ダッシュボード）により自動生成されました。*
