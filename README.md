@@ -1,5 +1,7 @@
 ﻿# PortfoliR
 
+ ![CI](https://github.com/saki-nya1539/portfolir/actions/workflows/ci.yml/badge.svg)
+
 **Portfolio × R** — 保有資産のリスクをシミュレーションで可視化する、R Shiny製のポートフォリオ・リスク分析ダッシュボード。
 
 ## 概要
@@ -40,6 +42,7 @@ Rの統計・データ分析の強みを活かし、リスク指標の計算式�
 | グラフ | ggplot2 + plotly |
 | レポート生成 | rmarkdown, knitr |
 | テスト | testthat |
+| CI/CD | GitHub Actions | pushのたびに`testthat`によるユニットテストを自動実行し、テストが通ることを継続的に検証 |
 
 Rを選んだ理由は、金融時系列データの扱いやすさと、`chol()`（コレスキー分解）・`quantile()`・`cor()`などリスク計算に直結する統計関数が標準搭載されている点にあります。モンテカルロシミュレーションのような数値計算主体の処理を、追加のライブラリなしで簡潔に書けるのはRならではの強みです。
 
